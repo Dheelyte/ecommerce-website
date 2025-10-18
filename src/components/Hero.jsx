@@ -1,6 +1,6 @@
 // Hero.js
 import React, { useState, useEffect } from 'react';
-import '../styles/Hero.css';
+import '../styles/hero.css';
 
 const Hero = () => {
   const [loaded, setLoaded] = useState(false);
