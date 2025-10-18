@@ -1,0 +1,462 @@
+/* PromoBanner.css */
+.promo-banner {
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.promo-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.promo-content {
+  padding-right: 2rem;
+}
+
+.promo-badge {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  margin-bottom: 1.5rem;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.badge-text {
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+}
+
+.badge-pulse {
+  width: 8px;
+  height: 8px;
+  background: #f56565;
+  border-radius: 50%;
+  margin-left: 0.5rem;
+  animation: pulse 2s infinite;
+}
+
+.promo-title {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+}
+
+.promo-subtitle {
+  font-size: 1.25rem;
+  opacity: 0.9;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.countdown-container {
+  margin-bottom: 2rem;
+}
+
+.countdown-label {
+  font-size: 0.875rem;
+  opacity: 0.8;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.countdown {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.countdown-item {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 1rem;
+  border-radius: 12px;
+  min-width: 70px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.countdown-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.countdown-label-small {
+  font-size: 0.75rem;
+  opacity: 0.8;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.countdown-separator {
+  font-size: 1.5rem;
+  font-weight: 700;
+  opacity: 0.7;
+  margin: 0 0.25rem;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-number {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  opacity: 0.8;
+}
+
+.claim-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.25rem 2.5rem;
+  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+  color: #1e293b;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.125rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 30px rgba(246, 211, 101, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.claim-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: left 0.5s ease;
+}
+
+.claim-button.hovered::before {
+  left: 100%;
+}
+
+.claim-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(246, 211, 101, 0.4);
+}
+
+.claim-button:active {
+  transform: translateY(-1px);
+}
+
+.claim-button.claimed {
+  background: #10b981;
+  box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
+}
+
+.promo-features {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  opacity: 0.9;
+}
+
+.feature-icon {
+  font-size: 1rem;
+}
+
+.promo-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.discount-tag {
+  position: absolute;
+  top: -1rem;
+  right: -1rem;
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(15deg);
+  animation: float 3s ease-in-out infinite;
+  z-index: 3;
+  box-shadow: 0 10px 30px rgba(238, 90, 36, 0.3);
+}
+
+.discount-amount {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.discount-text {
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.product-showcase {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  transform: perspective(1000px) rotateY(-5deg) rotateX(5deg);
+  transition: transform 0.5s ease;
+}
+
+.product-showcase:hover {
+  transform: perspective(1000px) rotateY(0) rotateX(0);
+}
+
+.ppromo-banner .product-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.product-showcase:hover .product-image {
+  transform: scale(1.05);
+}
+
+.floating-price {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  font-weight: 700;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  animation: float 3s ease-in-out infinite;
+}
+
+.original-price {
+  top: 20%;
+  left: -1rem;
+  text-decoration: line-through;
+  color: #64748b;
+  animation-delay: 0.5s;
+}
+
+.sale-price {
+  bottom: 20%;
+  right: -1rem;
+  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+  color: #1e293b;
+  animation-delay: 1s;
+}
+
+.sparkle-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.sparkle {
+  position: absolute;
+  animation: sparkle 2s ease-in-out infinite;
+  opacity: 0;
+}
+
+.confetti-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  animation: confettiFall 3s ease-in-out forwards;
+}
+
+/* Animations */
+@keyframes pulse {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(15deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(15deg);
+  }
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes confettiFall {
+  0% {
+    transform: translateY(-100px) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(500px) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .countdown {
+    gap: 0.25rem;
+    justify-content: center;
+  }
+  .promo-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+  
+  .promo-content {
+    padding-right: 0;
+  }
+  
+  .promo-title {
+    font-size: 2.5rem;
+  }
+  
+  .promo-features {
+    justify-content: center;
+  }
+  
+  .product-showcase {
+    transform: none;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .promo-banner {
+    padding: 2rem 1rem;
+  }
+  
+  .promo-title {
+    font-size: 2rem;
+  }
+  
+  .countdown-item {
+    min-width: 50px;
+    padding: 0.75rem 0.5rem;
+  }
+  
+  .countdown-value {
+    font-size: 1.25rem;
+  }
+  
+  .countdown-separator {
+    font-size: 1.25rem;
+  }
+  
+  .claim-button {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+  
+  .discount-tag {
+    width: 60px;
+    height: 60px;
+    right: -0.5rem;
+  }
+  
+  .discount-amount {
+    font-size: 1.25rem;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .badge-pulse,
+  .claim-button::before,
+  .product-showcase,
+  .promo-banner .product-image,
+  .sparkle,
+  .confetti {
+    animation: none;
+    transition: none;
+  }
+  
+  .discount-tag,
+  .floating-price {
+    animation: none;
+  }
+  
+  .claim-button:hover {
+    transform: none;
+  }
+}
